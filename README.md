@@ -65,18 +65,42 @@ The **Voting Regressor** is used as the final serving model.
 These visualizations ensure the project demonstrates strong model-interpretability practices.
 
 ---
+## Tech Stack
+
+-Python
+-NumPy, Pandas
+-Matplotlib, Seaborn
+-Scikit-Learn
+
+---
 
 ##  Final Evaluation Metrics  
 
-| Model             | RMSE | MAE | R² Score |
-|-------------------|------|------|-----------|
-| Random Forest     |  |  |  |
-| Ridge Regression  |  |  |  |
-| Gradient Boosting |  |  |  |
-| Voting Regressor  |  |  |  |
+| Model                                | Cross-Val Mean Score (RMSE) ± std| Test RMSE | Test MAE | R² Score   |
+|--------------------------------------|----------------------------------|-----------|----------|------------|
+| **Random Forest Regressor (RF)**     | **56.97 ± 6.396**                |**52.94**  |**43.44** | **0.4709** |
+| **Ridge Regression (LR)**            | **55.58 ±4.845**                 |**53.77**  | **42.81**| **0.4541** |
+| **Gradient Boosting Regressor (GBR)**| **59.09 ±  6.536**               | **52.72** | **43.21**|**0.4752**  |
+| **Voting Regressor**                 | **56.19 ± 5.681**                |  **52.16**| **42.61**| **0.4863** |
 
 ---
 
 ## Model Export  
 The final ensemble model is saved as:
+Using:
+`python
+joblib.dump(voting_reg, 'voting_model_diabetes_prediction.pkl')`
 
+---
+## How to Run
+
+Clone the repository:
+`git clone https://github.com/your-username/diabetes-regression-ml.git`
+
+---
+## Author  
+
+**Lavan Kumar Konda**  
+-  2nd Year Student at NIT Andhra Pradesh  
+-  Passionate about Data Science, Machine Learning, and AI  
+-  [LinkedIn](https://www.linkedin.com/in/lavan-kumar-konda/)
